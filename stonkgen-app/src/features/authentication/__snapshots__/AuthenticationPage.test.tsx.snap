@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Authentication Component should render the login snapshot 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-5 mx-auto p-5"
+    >
+      <div
+        className="d-flex justify-content-between mb-3"
+      >
+        <div>
+          <button
+            className="btn btn-lg btn-link"
+            data-test="Login"
+            disabled={true}
+            onClick={[Function]}
+          >
+            Login
+          </button>
+        </div>
+        <div>
+          <button
+            className="btn btn-lg btn-link"
+            data-test="Sign Up"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+      <form
+        action="#"
+        onReset={[Function]}
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="userName"
+          >
+            User Name
+          </label>
+          <input
+            className="form-control"
+            name="userName"
+            onBlur={[Function]}
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          className="form-group mb-3"
+        >
+          <label
+            htmlFor="password"
+          >
+            Password
+          </label>
+          <input
+            className="form-control"
+            name="password"
+            onBlur={[Function]}
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          className="col-md-12 text-center "
+        >
+          <button
+            className=" btn btn-block mybtn btn-primary tx-tfm"
+            disabled={false}
+            type="submit"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

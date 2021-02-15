@@ -1,0 +1,27 @@
+Frontend
+- Typescript
+- React 
+- Context state 
+- Jest
+- Testing library
+- bs4
+- Redux
+    - Redux toolkit 
+    -- ConfigureStore => devtools, thunk, logger
+- Hooks
+- pagination
+- responsive
+- authentication
+- README 
++ graphs for stocks using websocket
+
+Backend
+- Typescript
+- Node
+- Express
+- Services architecture
+- sqlLite
+- sequalize ORM
+- authentication
++ websocket to relay mock graphs
++ authentication token + refresh (if have time)

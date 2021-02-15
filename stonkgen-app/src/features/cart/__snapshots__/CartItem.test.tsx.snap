@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cart Item Component should render the cart Item 1`] = `
+<tr>
+  <td>
+    <input
+      checked={false}
+      disabled={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+  </td>
+  <td>
+    <DisplayStatus
+      displayStatus="notReady"
+    />
+     
+  </td>
+  <td
+    data-test="executionSide"
+    style={
+      Object {
+        "textTransform": "capitalize",
+      }
+    }
+  >
+    buy
+  </td>
+  <td
+    data-test="bloombergTickerLocal"
+  >
+    434 HK
+  </td>
+  <td>
+    <select
+      className="form-control"
+      data-test="executionMode"
+      disabled={false}
+      onChange={[Function]}
+      value="market"
+    >
+      <option
+        value="market"
+      >
+        Market
+      </option>
+      <option
+        value="limit"
+      >
+        Limit
+      </option>
+    </select>
+  </td>
+  <td>
+    <div
+      className="input-group"
+    >
+      <input
+        className="form-control"
+        data-test="orderPrice"
+        disabled={true}
+        onChange={[Function]}
+        type="number"
+        value=""
+      />
+      <div
+        className="input-group-append"
+      >
+        <span
+          className="input-group-text"
+          data-test="currency"
+        >
+          HKD
+        </span>
+      </div>
+    </div>
+  </td>
+  <td>
+    <input
+      className="form-control"
+      data-test="amount"
+      disabled={false}
+      onChange={[Function]}
+      type="number"
+      value=""
+    />
+  </td>
+</tr>
+`;

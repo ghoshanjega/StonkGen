@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brand Component should render the Brand name Component correctly 1`] = `
+<span>
+  StonkGen
+</span>
+`;
