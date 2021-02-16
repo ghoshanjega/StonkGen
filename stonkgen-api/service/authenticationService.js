@@ -17,7 +17,7 @@ var authenticationService = {
     login: function (auth) {
         const { userName, password } = auth
         if (!userName || !password) {
-            throw new ErrorHandler(404, 'Missing required email and password fields')
+            throw new ErrorHandler(400, 'Missing required email and password fields')
         }
         else {
             const user = userTable.find({ userName: userName }).value();
@@ -35,19 +35,19 @@ var authenticationService = {
                         sessionId: session
                     }
                 }
-                throw new ErrorHandler(404, 'Wrong password')
+                throw new ErrorHandler(401, 'Unauthorized')
             }
-            throw new ErrorHandler(404, 'Missing user. Sign up instead')
+            throw new ErrorHandler(404, 'No user found. Sign up instead')
         }
 
     },
     signup: function (auth) {
         const { userName, password, fullName } = auth
         if (!userName || !password || !fullName) {
-            throw new ErrorHandler(404, 'Missing required email and password fields')
+            throw new ErrorHandler(400, 'Missing required email and password fields')
         }
         else if (userTable.find({ userName: userName }).value()){
-            throw new ErrorHandler(403, 'User name already taken')
+            throw new ErrorHandler(400, 'User name already taken')
         }
         else {
             const newUser = _.last(userTable.push({

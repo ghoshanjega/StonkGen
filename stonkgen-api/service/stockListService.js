@@ -18,7 +18,7 @@ var stockListService = {
         const { page = 1, limit = 10, orderBy = 'stockId', trend= 'asc' } = query;
         const totalPages = Math.ceil(stockTable.value().length / limit)
         if (page > totalPages || limit > 200 || !orderParams.includes(orderBy)){
-            throw new ErrorHandler(403, 'Query param not supported')
+            throw new ErrorHandler(400, 'Query parameters not supported')
         }
         let stocks = stockTable.orderBy(orderBy,trend).slice((page - 1) * limit, page * limit)
         if (orderBy === 'bloombergTickerLocal'){

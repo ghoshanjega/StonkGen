@@ -624,6 +624,43 @@
         "country": "Hong Kong",
         "price": 304.29
       }
+    },
+    {
+      "id": "1613481884127",
+      "stockId": "c94b2d39-3f1c-46d5-9673-62865fa3b99f",
+      "executionSide": "buy",
+      "sessionId": "1613479168501",
+      "status": "rejected",
+      "stock": {
+        "stockId": "c94b2d39-3f1c-46d5-9673-62865fa3b99f",
+        "currency": "HKD",
+        "ric": "0388.HK",
+        "bloombergTicker": "388 HK",
+        "bloombergTickerLocal": "388 HK",
+        "name": "Hong Kong Exchanges & Clearing Ltd",
+        "country": "Hong Kong",
+        "price": 252.36
+      },
+      "executionMode": "limit",
+      "amountBooked": null,
+      "priceBooked": 23
+    },
+    {
+      "id": "1613483296368",
+      "stockId": "9566837b-dfb0-4754-a752-b97a6ede8c80",
+      "executionSide": "buy",
+      "sessionId": "1613479168501",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "9566837b-dfb0-4754-a752-b97a6ede8c80",
+        "currency": "HKD",
+        "ric": "0005.HK",
+        "bloombergTicker": "5 HK",
+        "bloombergTickerLocal": "5 HK",
+        "name": "HSBC Holdings PLC",
+        "country": "Hong Kong",
+        "price": 295.64
+      }
     }
   ]
 }

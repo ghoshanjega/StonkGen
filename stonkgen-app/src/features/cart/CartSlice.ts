@@ -207,12 +207,11 @@ export const bookCartItem = (params: any): AppThunk => (dispatch) => {
       );
     })
     .catch((err: AxiosError) => {
-      console.log("err", err.response);
       dispatch(
         updateItem({
           id: item.id,
-          status: "rejected",
-          displayStatus: "rejected",
+          status: "error",
+          displayStatus: "inProgress",
           error: err.response?.data as IApiError,
         })
       );

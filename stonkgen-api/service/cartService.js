@@ -35,28 +35,23 @@ var cartService = {
         // console.log(execution,cartItem)
         if (cartItem) {
             if (cartItem.stock.bloombergTickerLocal === "5 HK") {
-                // cartTable.find({id : itemId}).assign({
-                //     ...cartItem,
-                //     status: "rejected"
-                // })
                 throw new ErrorHandler(500, 'Oops, it seems that there is an internal server error.')
             }
             else if (cartItem.stock.bloombergTickerLocal === "11 HK") {
-                throw new ErrorHandler(504, 'Gateway timeout')
+                throw new ErrorHandler(504, 'Oops, it seems that response took too long.')
             }
             else if (cartItem.stock.bloombergTickerLocal === "388 HK") {
                 cartTable.find({ id: itemId }).assign({
                     ...cartItem,
-                    executionMode : execution.executionMode,
-                    amountBooked : null,
-                    priceBooked: execution.executionMode === "market" ? cartItem.stock.price : execution.displayPrice,
+                    executionModeBooked : execution.executionMode,
+                    amountBooked : execution.amount,
+                    priceBooked: execution.displayPrice,
                     status: "rejected"
                 }).write()
                 return cartTable.find({ id: itemId }).value();
             }
             else {
-                const priceBooked =  execution.displayPrice || cartItem.stock.price
-                console.log(execution.displayPrice,cartItem.stock,"asd")
+                const priceBooked =  execution.displayPrice || cartItem.stock.price + Math.floor(Math.random() * Math.floor(20))
                 cartTable.find({ id: itemId }).assign({
                     ...cartItem,
                     executionModeBooked : execution.executionMode,
@@ -87,7 +82,12 @@ var cartService = {
         const allSessionIds = authenticationService.getAllSessionsOfUser({userId}).map((item) => item.id)
         const grouped = [];
         allSessionIds.forEach((session)=>{
-            const items = cartTable.filter({ sessionId: session, status : "booked" || "rejected" }).value();
+            const items = cartTable.filter((o) => {
+                if (o.sessionId === session && ["booked", "rejected"].includes(o.status)) {
+                    return true;
+                }
+                return false;
+            }).value();
             if (items.length > 0){
                 grouped.push({sessionId : session,items })
             }

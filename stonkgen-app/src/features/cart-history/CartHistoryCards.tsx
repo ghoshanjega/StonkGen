@@ -29,7 +29,6 @@ export const CartHistoryCards = ({ cartItems }: Props) => {
                   )}
                   <tbody>
                     {session.items.map((item) => {
-                      if (item.status === "booked") {
                         return (
                           <tr>
                             <td>
@@ -42,7 +41,7 @@ export const CartHistoryCards = ({ cartItems }: Props) => {
                             <td>{item.amountBooked}</td>
                           </tr>
                         );
-                      }
+
                     })}
                   </tbody>
                 </table>
