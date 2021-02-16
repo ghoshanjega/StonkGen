@@ -33,29 +33,6 @@ export const CartItem = ({ item, handleItemChange }: Props) => {
     return false;
   };
 
-  // const handleExecutionMode = (e: React.ChangeEvent<HTMLSelectElement>) => {
-  //   dispatch(setExecutionMode({ index, executionMode: e.target.value }));
-  //   dispatch(setDisplayStatus({index}))
-  // };
-
-  // const handleOrderPrice = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   dispatch(setDisplayPrice({ index, orderPrice: e.target.valueAsNumber }));
-  //   dispatch(setDisplayStatus({index}))
-  // };
-
-  // const handleAmount = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   dispatch(setAmount({ index, amount: e.target.valueAsNumber }));
-  //   dispatch(setDisplayStatus({index}))
-  // };
-
-  // const handleSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   dispatch(setSelect({ index, select: e.target.checked }));
-  // };
-
-  // const handleErrorClose = () => {
-  //   dispatch(updateItem({ id: item.id, error: null}));
-  // }
-
   if (item.error) {
     return (
       <tr>

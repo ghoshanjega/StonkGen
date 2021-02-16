@@ -545,7 +545,7 @@
       "stockId": "695a76cc-6c2f-455a-95f2-43b00c678e4e",
       "executionSide": "buy",
       "sessionId": "1613479168501",
-      "status": "prebooking",
+      "status": "booked",
       "stock": {
         "stockId": "695a76cc-6c2f-455a-95f2-43b00c678e4e",
         "currency": "HKD",
@@ -555,7 +555,10 @@
         "name": "A8 New Media Group Ltd",
         "country": "Hong Kong",
         "price": 162.64
-      }
+      },
+      "executionModeBooked": "limit",
+      "amountBooked": 2,
+      "priceBooked": 1
     },
     {
       "id": "1613479865451",

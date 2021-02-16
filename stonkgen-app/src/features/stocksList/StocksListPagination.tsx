@@ -42,9 +42,6 @@ export const StocksListPagination = () => {
     }
     return pages;
   };
-
-  console.log("rendered")
-
   return (
     <nav className="fixed-bottom">
       <ul className="pagination justify-content-center">
