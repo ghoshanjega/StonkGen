@@ -283,6 +283,347 @@
         "country": "Hong Kong",
         "price": 198.82
       }
+    },
+    {
+      "id": "1613452018682",
+      "stockId": "548085f7-9348-464a-bcb7-282a840701ad",
+      "executionSide": "buy",
+      "sessionId": "1613451819825",
+      "status": "booked",
+      "stock": {
+        "stockId": "548085f7-9348-464a-bcb7-282a840701ad",
+        "currency": "USD",
+        "ric": "T.N",
+        "bloombergTicker": "T US",
+        "bloombergTickerLocal": "T UN",
+        "name": "AT&T Inc",
+        "country": "United States",
+        "price": 247.99
+      },
+      "executionModeBooked": "limit",
+      "amountBooked": 1,
+      "priceBooked": 123
+    },
+    {
+      "id": "1613452019108",
+      "stockId": "45ccf92d-18e2-4b97-babb-b6999c5b09d4",
+      "executionSide": "sell",
+      "sessionId": "1613451819825",
+      "status": "booked",
+      "stock": {
+        "stockId": "45ccf92d-18e2-4b97-babb-b6999c5b09d4",
+        "currency": "USD",
+        "ric": "JNJ.N",
+        "bloombergTicker": "JNJ US",
+        "bloombergTickerLocal": "JNJ UN",
+        "name": "Johnson & Johnson",
+        "country": "United States",
+        "price": 297.22
+      },
+      "executionModeBooked": "market",
+      "amountBooked": 2,
+      "priceBooked": 297.22
+    },
+    {
+      "id": "1613452020731",
+      "stockId": "c839a052-ae22-414e-8658-9a5fb4c4cf41",
+      "executionSide": "buy",
+      "sessionId": "1613451819825",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "c839a052-ae22-414e-8658-9a5fb4c4cf41",
+        "currency": "USD",
+        "ric": "AMZN.OQ",
+        "bloombergTicker": "AMZN US",
+        "bloombergTickerLocal": "AMZN UW",
+        "name": "Amazon.com Inc",
+        "country": "United States",
+        "price": 315.9
+      }
+    },
+    {
+      "id": "1613452021395",
+      "stockId": "f12a15a7-0e8c-4c4e-a17f-42d24e113a9c",
+      "executionSide": "buy",
+      "sessionId": "1613451819825",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "f12a15a7-0e8c-4c4e-a17f-42d24e113a9c",
+        "currency": "USD",
+        "ric": "ORCL.N",
+        "bloombergTicker": "ORCL US",
+        "bloombergTickerLocal": "ORCL UN",
+        "name": "Oracle Corp",
+        "country": "United States",
+        "price": 258.25
+      }
+    },
+    {
+      "id": "1613452021922",
+      "stockId": "efa3fd76-b099-4e31-836e-17520e902e2d",
+      "executionSide": "buy",
+      "sessionId": "1613451819825",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "efa3fd76-b099-4e31-836e-17520e902e2d",
+        "currency": "EUR",
+        "ric": "HK.MI",
+        "bloombergTicker": "HK IM",
+        "bloombergTickerLocal": "HK IM",
+        "name": null,
+        "country": null,
+        "price": 23.07
+      }
+    },
+    {
+      "id": "1613452022429",
+      "stockId": "8bb54a6e-8859-4510-89e1-10df250c0a28",
+      "executionSide": "buy",
+      "sessionId": "1613451819825",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "8bb54a6e-8859-4510-89e1-10df250c0a28",
+        "currency": "USD",
+        "ric": "NSRGY.PK",
+        "bloombergTicker": "NSRGY US",
+        "bloombergTickerLocal": "NSRGY UV",
+        "name": "NESTLE SA - SPONS ADR FOR REG",
+        "country": "United States",
+        "price": 67.42
+      }
+    },
+    {
+      "id": "1613452037937",
+      "stockId": "9566837b-dfb0-4754-a752-b97a6ede8c80",
+      "executionSide": "buy",
+      "sessionId": "1613451819825",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "9566837b-dfb0-4754-a752-b97a6ede8c80",
+        "currency": "HKD",
+        "ric": "0005.HK",
+        "bloombergTicker": "5 HK",
+        "bloombergTickerLocal": "5 HK",
+        "name": "HSBC Holdings PLC",
+        "country": "Hong Kong",
+        "price": 295.64
+      }
+    },
+    {
+      "id": "1613452040771",
+      "stockId": "0e02d8b5-218f-469a-a07e-ce65c5a8c7f6",
+      "executionSide": "buy",
+      "sessionId": "1613451819825",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "0e02d8b5-218f-469a-a07e-ce65c5a8c7f6",
+        "currency": "HKD",
+        "ric": "0011.HK",
+        "bloombergTicker": "11 HK",
+        "bloombergTickerLocal": "11 HK",
+        "name": "HANG SENG BANK /  HONG KONG",
+        "country": "Hong Kong",
+        "price": 62.26
+      }
+    },
+    {
+      "id": "1613452844638",
+      "stockId": "f7086c42-90bc-4712-aa3c-f1ee6f83c6cf",
+      "executionSide": "buy",
+      "sessionId": "1613452835982",
+      "status": "booked",
+      "stock": {
+        "stockId": "f7086c42-90bc-4712-aa3c-f1ee6f83c6cf",
+        "currency": "USD",
+        "ric": "MMM.N",
+        "bloombergTicker": "MMM US",
+        "bloombergTickerLocal": "MMM UN",
+        "name": "3M CO",
+        "country": "United States",
+        "price": 417.53
+      },
+      "executionModeBooked": "market",
+      "amountBooked": 1,
+      "priceBooked": 417.53
+    },
+    {
+      "id": "1613452845384",
+      "stockId": "3632c703-0ffa-4e69-9672-a6038cc65857",
+      "executionSide": "buy",
+      "sessionId": "1613452835982",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "3632c703-0ffa-4e69-9672-a6038cc65857",
+        "currency": "HKD",
+        "ric": "0797.HK",
+        "bloombergTicker": "797 HK",
+        "bloombergTickerLocal": "797 HK",
+        "name": "7Road Holdings Ltd",
+        "country": "Hong Kong",
+        "price": 399.72
+      }
+    },
+    {
+      "id": "1613452845945",
+      "stockId": "e970454e-2cfc-461d-9638-b5a1bc6450e8",
+      "executionSide": "buy",
+      "sessionId": "1613452835982",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "e970454e-2cfc-461d-9638-b5a1bc6450e8",
+        "currency": "HKD",
+        "ric": "3319.HK",
+        "bloombergTicker": "3319 HK",
+        "bloombergTickerLocal": "3319 HK",
+        "name": "A-Living Services Co Ltd",
+        "country": "Hong Kong",
+        "price": 418.54
+      }
+    },
+    {
+      "id": "1613479862584",
+      "stockId": "f7086c42-90bc-4712-aa3c-f1ee6f83c6cf",
+      "executionSide": "buy",
+      "sessionId": "1613479168501",
+      "status": "booked",
+      "stock": {
+        "stockId": "f7086c42-90bc-4712-aa3c-f1ee6f83c6cf",
+        "currency": "USD",
+        "ric": "MMM.N",
+        "bloombergTicker": "MMM US",
+        "bloombergTickerLocal": "MMM UN",
+        "name": "3M CO",
+        "country": "United States",
+        "price": 417.53
+      },
+      "executionModeBooked": "market",
+      "amountBooked": 1,
+      "priceBooked": 417.53
+    },
+    {
+      "id": "1613479863688",
+      "stockId": "3632c703-0ffa-4e69-9672-a6038cc65857",
+      "executionSide": "buy",
+      "sessionId": "1613479168501",
+      "status": "booked",
+      "stock": {
+        "stockId": "3632c703-0ffa-4e69-9672-a6038cc65857",
+        "currency": "HKD",
+        "ric": "0797.HK",
+        "bloombergTicker": "797 HK",
+        "bloombergTickerLocal": "797 HK",
+        "name": "7Road Holdings Ltd",
+        "country": "Hong Kong",
+        "price": 399.72
+      },
+      "executionModeBooked": "limit",
+      "amountBooked": 2,
+      "priceBooked": 123
+    },
+    {
+      "id": "1613479864205",
+      "stockId": "e970454e-2cfc-461d-9638-b5a1bc6450e8",
+      "executionSide": "buy",
+      "sessionId": "1613479168501",
+      "status": "booked",
+      "stock": {
+        "stockId": "e970454e-2cfc-461d-9638-b5a1bc6450e8",
+        "currency": "HKD",
+        "ric": "3319.HK",
+        "bloombergTicker": "3319 HK",
+        "bloombergTickerLocal": "3319 HK",
+        "name": "A-Living Services Co Ltd",
+        "country": "Hong Kong",
+        "price": 418.54
+      },
+      "executionModeBooked": "market",
+      "amountBooked": 3,
+      "priceBooked": 418.54
+    },
+    {
+      "id": "1613479864765",
+      "stockId": "695a76cc-6c2f-455a-95f2-43b00c678e4e",
+      "executionSide": "buy",
+      "sessionId": "1613479168501",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "695a76cc-6c2f-455a-95f2-43b00c678e4e",
+        "currency": "HKD",
+        "ric": "0800.HK",
+        "bloombergTicker": "800 HK",
+        "bloombergTickerLocal": "800 HK",
+        "name": "A8 New Media Group Ltd",
+        "country": "Hong Kong",
+        "price": 162.64
+      }
+    },
+    {
+      "id": "1613479865451",
+      "stockId": "a760d5ea-4e64-45da-b9e6-d8c2b14a3deb",
+      "executionSide": "buy",
+      "sessionId": "1613479168501",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "a760d5ea-4e64-45da-b9e6-d8c2b14a3deb",
+        "currency": "HKD",
+        "ric": "2018.HK",
+        "bloombergTicker": "2018 HK",
+        "bloombergTickerLocal": "2018 HK",
+        "name": "AAC Technologies Holdings Inc",
+        "country": "Hong Kong",
+        "price": 295.6
+      }
+    },
+    {
+      "id": "1613479865950",
+      "stockId": "7b93b1ab-5bc0-49d7-bd4f-3b1806e5750c",
+      "executionSide": "buy",
+      "sessionId": "1613479168501",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "7b93b1ab-5bc0-49d7-bd4f-3b1806e5750c",
+        "currency": "HKD",
+        "ric": "0900.HK",
+        "bloombergTicker": "900 HK",
+        "bloombergTickerLocal": "900 HK",
+        "name": "AEON CREDIT SERVICE (ASIA) CO",
+        "country": "Hong Kong",
+        "price": 338.74
+      }
+    },
+    {
+      "id": "1613479866440",
+      "stockId": "0d4ea165-94cb-42a8-bae9-903e33f2c589",
+      "executionSide": "buy",
+      "sessionId": "1613479168501",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "0d4ea165-94cb-42a8-bae9-903e33f2c589",
+        "currency": "HKD",
+        "ric": "1299.HK",
+        "bloombergTicker": "1299 HK",
+        "bloombergTickerLocal": "1299 HK",
+        "name": "AIA Group Ltd",
+        "country": "Hong Kong",
+        "price": 198.82
+      }
+    },
+    {
+      "id": "1613479867043",
+      "stockId": "a585f002-1783-4e37-a7f6-5a41bc24037a",
+      "executionSide": "buy",
+      "sessionId": "1613479168501",
+      "status": "prebooking",
+      "stock": {
+        "stockId": "a585f002-1783-4e37-a7f6-5a41bc24037a",
+        "currency": "HKD",
+        "ric": "0328.HK",
+        "bloombergTicker": "328 HK",
+        "bloombergTickerLocal": "328 HK",
+        "name": "ALCO HOLDINGS LIMITED",
+        "country": "Hong Kong",
+        "price": 304.29
+      }
     }
   ]
 }

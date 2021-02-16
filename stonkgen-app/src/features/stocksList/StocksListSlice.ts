@@ -101,5 +101,7 @@ export const selectStocks = (state: RootState) => state.stocksList.stocks;
 export const selectParams = (state: RootState) => state.stocksList.params;
 export const selectDisplayTable = (state: RootState) => state.stocksList.displayTable;
 export const selectTotalPages = (state: RootState) => state.stocksList.totalPages;
+export const selectLoadingError = (state: RootState) => { return { isLoading : state.stocksList.isLoading, error : state.stocksList.error} };
+
 
 export default stocksListSlice.reducer;

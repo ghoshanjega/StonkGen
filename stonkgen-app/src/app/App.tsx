@@ -5,6 +5,7 @@ import { Header } from "../components/Header";
 
 import { AuthenticationPage } from "../features/authentication/AuthenticationPage";
 import { selectUser } from "../features/authentication/AuthenticationSlice";
+import { CartHistoryPage } from "../features/cart-history/CartHistoryPage";
 import { CartPage } from "../features/cart/CartPage";
 import { StocksListPage } from "../features/stocksList/StocksListPage";
 
@@ -26,6 +27,9 @@ function App() {
         <Switch>
           <Route path="/orders">
             <CartPage />
+          </Route>
+          <Route path="/order-history">
+            <CartHistoryPage />
           </Route>
           <Route path="/login">
             <AuthenticationPage />

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`cart Item Component should render the cart Item 1`] = `
+exports[`Cart Item Component should render the cart Item 1`] = `
 <tr>
   <td>
     <input

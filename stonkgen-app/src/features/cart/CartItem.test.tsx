@@ -29,7 +29,7 @@ const mockItem : ICartItemExtended = {
 }
 const handleItemChange  = () => {}
 
-describe("cart Item Component", () => {
+describe("Cart Item Component", () => {
   
   it("should render the cart Item", () => {
     let component = shallow(<CartItem item={mockItem} handleItemChange={handleItemChange} />) 

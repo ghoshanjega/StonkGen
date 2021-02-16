@@ -34,15 +34,6 @@ var authenticationService = {
                         fullName: user.fullName,
                         sessionId: session
                     }
-
-                    // const session = sessionTable.insert(
-                    //     { time: Date.now().toString(), userId: user.id }).value()
-                    // // sessionTable.push(session).write() 
-                    // return {
-                    //     userName: user.userName,
-                    //     fullName: user.fullName,
-                    //     sessionId: session.id
-                    // }
                 }
                 throw new ErrorHandler(404, 'Wrong password')
             }
@@ -65,8 +56,26 @@ var authenticationService = {
                 userName,
                 password
             }).write())
-            return newUser
+            
+            const session = Date.now().toString()
+            sessionTable.push({
+                id: session,
+                userId: newUser.id
+            }).write()
+            return {
+                userName: newUser.userName,
+                fullName: newUser.fullName,
+                sessionId: session
+            }
         }
+    },
+    getUserIdFromSession: function(auth)  {
+        const {sessionId} = auth;
+        return sessionTable.find({id : sessionId}).value();
+    },
+    getAllSessionsOfUser: function(auth) {
+        const {userId } = auth;
+        return sessionTable.filter({userId}).value();
     }
 };
 

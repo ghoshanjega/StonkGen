@@ -1,20 +1,27 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { LoadingError } from "../../components/LoadingError";
 import { selectUser } from "../authentication/AuthenticationSlice";
 import { CartItem } from "./CartItem";
-import { selectCartItems, fetchCartItems, removeCartItems, bookCartItem, updateItem, setDisplayStatus } from "./CartSlice";
+import { selectCartItems, fetchCartItems, removeCartItems, bookCartItem, updateItem, setDisplayStatus, selectLoadingError } from "./CartSlice";
 
 export const CartPage = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
   const cartItems = useSelector(selectCartItems);
+  const stat = useSelector(selectLoadingError);
+  const history = useHistory()
 
-  useEffect(() => {
+  const loadCartItems = () => {
     if (user) {
       const sessionId = user.sessionId || "no session detected";
       dispatch(fetchCartItems({ sessionId }));
     }
-    return () => {};
+  }
+
+  useEffect(() => {
+   loadCartItems();
   }, []);
 
   const selected = () => {
@@ -64,9 +71,12 @@ export const CartPage = () => {
 
   return (
     <div className="container">
-      <div className="d-flex justify-content-between my-3">
+      <div className="d-flex justify-content-between my-5">
         <div></div>
         <div>
+        <button className="btn btn-link mr-2" onClick={() => history.push("/order-history")}>
+            History
+          </button>
           <button className="btn btn-primary mr-2" disabled={isRemoveDisabled()} onClick={() => handleRemove()}>
             Remove
           </button>
@@ -76,7 +86,8 @@ export const CartPage = () => {
         </div>
       </div>
       <div>
-        <table className="table mytable">
+        <LoadingError error={stat.error} loading={stat.isLoading} refreshButton={loadCartItems}>
+        {cartItems && cartItems.length > 0 ?<table className="table mytable">
           <thead>
             <tr>
               <th></th>
@@ -88,14 +99,16 @@ export const CartPage = () => {
               <th>Amount (Shares)</th>
             </tr>
           </thead>
-          {cartItems && (
+          {
             <tbody>
               {cartItems.map((item, index) => {
                 return <CartItem item={item} key={item.id} handleItemChange={handleItemChange} />;
               })}
             </tbody>
-          )}
+          }
         </table>
+        : <p className="lead text-center">No items to show</p>}
+        </LoadingError>
       </div>
     </div>
   );

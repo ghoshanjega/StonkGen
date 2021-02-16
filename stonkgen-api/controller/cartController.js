@@ -19,7 +19,11 @@ var cartController = {
     removeItems: function (req,res) {
         const execution = req.body;
         res.json(cartService.removeItems(execution,execution));
-    }
+    },
+    getAllPreviousCartSessions : function (req, res) {
+        const params = req.query;
+        res.json(cartService.getAllPreviousCartSessions(params));
+    },
 };
 
 module.exports = cartController;

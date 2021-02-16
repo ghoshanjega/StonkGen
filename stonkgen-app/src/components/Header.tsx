@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -18,6 +18,7 @@ import { Brand } from "./Brand";
 
 export const Header = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const user = useSelector(selectUser);
   
   const [isOpen, setIsOpen] = useState(false);
@@ -48,8 +49,8 @@ export const Header = () => {
                 {user?.fullName}
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
-                  profile
+                <DropdownItem onClick={()=>history.push("/order-history")}>
+                  history
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem onClick={()=>handleLogout()}>

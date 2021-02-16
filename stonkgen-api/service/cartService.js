@@ -14,6 +14,7 @@ const cartTable = cartdb.get('orders')
 
 //other services
 var stockListService = require('../service/stockListService');
+var authenticationService = require('../service/authenticationService');
 
 var cartService = {
     addToCart: function (execution) {
@@ -79,7 +80,22 @@ var cartService = {
             });
             return "ok"
         }
+    },
+    getAllPreviousCartSessions: function (params)  {
+        const {sessionId} = params;
+        const {userId} = authenticationService.getUserIdFromSession({sessionId});
+        const allSessionIds = authenticationService.getAllSessionsOfUser({userId}).map((item) => item.id)
+        const grouped = [];
+        allSessionIds.forEach((session)=>{
+            const items = cartTable.filter({ sessionId: session, status : "booked" || "rejected" }).value();
+            if (items.length > 0){
+                grouped.push({sessionId : session,items })
+            }
+            
+        })
+        return _.sortBy(grouped,sessionId).reverse()
     }
+
 
 }
 

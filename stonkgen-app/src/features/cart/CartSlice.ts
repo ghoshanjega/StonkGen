@@ -220,5 +220,6 @@ export const bookCartItem = (params: any): AppThunk => (dispatch) => {
 };
 
 export const selectCartItems = (state: RootState) => state.cart.cartItems;
+export const selectLoadingError = (state: RootState) => { return { isLoading : state.cart.isLoading, error : state.cart.error} };
 
 export default cartSlice.reducer;

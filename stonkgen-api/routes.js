@@ -20,4 +20,6 @@ module.exports = function (app) {
         .patch(cart.bookItem);
     app.route('/cart/remove')
         .patch(cart.removeItems);
+    app.route('/cart/history')
+        .get(cart.getAllPreviousCartSessions);
 };
