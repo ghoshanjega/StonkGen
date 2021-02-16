@@ -73,16 +73,9 @@ export const cartSlice = createSlice({
         const itemIndex = state.cartItems.findIndex((item) => item.id === action.payload.id);
         if (itemIndex > -1 && state.cartItems) {
           const item = state.cartItems[itemIndex]
-          console.log("actions",action.payload)
           state.cartItems[itemIndex].displayStatus = computeDisplayStatus(item);
         }
       }
-      // const index = action.payload.index as number;
-      // if (state.cartItems) {
-      //   const item = state.cartItems[index]
-      //   state.cartItems[index].displayStatus = computeDisplayStatus(item);
-      // }
-
     },
     removeItems: (state, action) => {
       const removeIds = action.payload.itemId as string[];

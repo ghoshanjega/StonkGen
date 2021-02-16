@@ -32,7 +32,6 @@ var cartService = {
     },
     bookItem: function (itemId, execution) {
         const cartItem = cartTable.find({ id: itemId }).value()
-        // console.log(execution,cartItem)
         if (cartItem) {
             if (cartItem.stock.bloombergTickerLocal === "5 HK") {
                 throw new ErrorHandler(500, 'Oops, it seems that there is an internal server error.')
@@ -68,7 +67,6 @@ var cartService = {
     },
     removeItems: function (execution) {
         const removeIds = execution.itemId;
-        console.log(removeIds)
         if (removeIds){
             removeIds.forEach(itemId => {
                 cartTable.remove({ id: itemId }).write()
