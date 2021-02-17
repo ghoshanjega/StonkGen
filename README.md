@@ -1,3 +1,15 @@
+## Install
+
+```shell
+cd stonkgen-api
+yarn
+```
+
+```shell
+cd stonkgen-app
+yarn
+```
+
 ## Start
 
 ```shell
