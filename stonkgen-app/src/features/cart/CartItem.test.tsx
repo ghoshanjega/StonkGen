@@ -1,7 +1,8 @@
 import React from "react";
+import { shallow } from 'enzyme';
+
 import { CartItem } from "./CartItem";
 import { ICartItemExtended } from "./CartSlice";
-import { shallow } from 'enzyme';
 
 
 const mockItem : ICartItemExtended = {

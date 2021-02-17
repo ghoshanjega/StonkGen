@@ -19,29 +19,30 @@ export const CartHistoryCards = ({ cartItems }: Props) => {
                 <table className="table table-sm">
                   {session.items.length > 0 && (
                     <thead>
-                      <td></td>
-                      <td>Stock code</td>
-                      <td>Execution side</td>
-                      <td>Execution mode</td>
-                      <td>Order price</td>
-                      <td>amount</td>
+                      <tr>
+                        <th></th>
+                        <th>Stock code</th>
+                        <th>Execution side</th>
+                        <th>Execution mode</th>
+                        <th>Order price</th>
+                        <th>amount</th>
+                      </tr>
                     </thead>
                   )}
                   <tbody>
                     {session.items.map((item) => {
-                        return (
-                          <tr>
-                            <td>
-                              <DisplayStatus displayStatus={item.status} />
-                            </td>
-                            <td>{item.stock.bloombergTickerLocal} </td>
-                            <td>{item.executionSide} </td>
-                            <td>{item.executionModeBooked} </td>
-                            <td>{item.priceBooked} </td>
-                            <td>{item.amountBooked}</td>
-                          </tr>
-                        );
-
+                      return (
+                        <tr key={item.id}>
+                          <td>
+                            <DisplayStatus displayStatus={item.status} />
+                          </td>
+                          <td data-test="bloombergTickerLocal">{item.stock.bloombergTickerLocal}</td>
+                          <td data-test="executionSide">{item.executionSide}</td>
+                          <td data-test="executionMode">{item.executionModeBooked}</td>
+                          <td data-test="priceBooked">{item.priceBooked + " " + item.stock.currency}</td>
+                          <td data-test="amountBooked">{item.amountBooked}</td>
+                        </tr>
+                      );
                     })}
                   </tbody>
                 </table>
@@ -55,7 +56,7 @@ export const CartHistoryCards = ({ cartItems }: Props) => {
     return (
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
-          <p className="lead text-center">Nothing to show yet</p>
+          <p className="lead text-center" data-test="nothing">Nothing to show yet</p>
         </div>
       </div>
     );

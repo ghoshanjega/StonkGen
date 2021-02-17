@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart History Page Component should render the snapshot 1`] = `
+<div
+  className="container my-5"
+>
+  <div
+    className="jumbotron jumbotron-fluid"
+  >
+    <div
+      className="container"
+    >
+      <p
+        className="lead text-center"
+        data-test="nothing"
+      >
+        Nothing to show yet
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header Component should render the header snapshot 1`] = `
+<div
+  className="container my-5"
+>
+  <div
+    className="jumbotron jumbotron-fluid"
+  >
+    <div
+      className="container"
+    >
+      <p
+        className="lead text-center"
+        data-test="nothing"
+      >
+        Nothing to show yet
+      </p>
+    </div>
+  </div>
+</div>
+`;

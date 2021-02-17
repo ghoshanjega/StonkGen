@@ -18,7 +18,12 @@ export const AuthenticationPage = () => {
 
   const wrapInLoginToggle = (text: string, disabled: boolean = false) => {
     return (
-      <button className={`btn btn-lg btn-link`} data-test={text} disabled={disabled} onClick={() => dispatch(toggleDisplayLogin())}>
+      <button
+        className={`btn btn-lg btn-link`}
+        data-test={text}
+        disabled={disabled}
+        onClick={() => dispatch(toggleDisplayLogin())}
+      >
         {text}
       </button>
     );
@@ -33,19 +38,28 @@ export const AuthenticationPage = () => {
             <div>{!displayLogin ? wrapInLoginToggle("Sign Up", true) : wrapInLoginToggle("Sign Up")}</div>
           </div>
           <Formik
-            initialValues={{ userName: "", password: "", fullName: "" }}
+            initialValues={{ userName: "", password: "", fullName: "", admin: false }}
             onSubmit={(values, actions) => {
               actions.setSubmitting(false);
               displayLogin ? dispatch(login(values)) : dispatch(signup(values));
             }}
           >
-            {({ isSubmitting }) => (
+            {({ isSubmitting, values }) => (
               <Form>
                 {!displayLogin && (
-                  <div className="form-group">
-                    <label htmlFor="fullName">Full Name</label>
-                    <Field type="text" name="fullName" className="form-control" />
-                  </div>
+                  <>
+                    <div className="form-group form-check text-center">
+                      <Field className="form-check-input" type="checkbox" name="admin" />
+                      <label className="form-check-label" htmlFor="admin">
+                        Admin
+                      </label>
+                    </div>
+
+                    <div className="form-group">
+                      <label htmlFor="fullName">Full Name</label>
+                      <Field type="text" name="fullName" className="form-control" />
+                    </div>
+                  </>
                 )}
                 <div className="form-group">
                   <label htmlFor="userName">User Name</label>

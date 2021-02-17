@@ -22,13 +22,14 @@ var cartService = {
         cartTable.push({
             id: Date.now().toString(),
             ...execution,
+            visible: true,
             status: "prebooking",
             stock
         }).write();
         return "ok"
     },
     getCart: function (params) {
-        return cartTable.filter({ sessionId: params.sessionId }).value();
+        return cartTable.filter({ sessionId: params.sessionId, visible: true }).value();
     },
     bookItem: function (itemId, execution) {
         const cartItem = cartTable.find({ id: itemId }).value()
@@ -69,7 +70,10 @@ var cartService = {
         const removeIds = execution.itemId;
         if (removeIds){
             removeIds.forEach(itemId => {
-                cartTable.remove({ id: itemId }).write()
+                // cartTable.remove({ id: itemId }).write()
+                cartTable.find({ id: itemId }).assign({
+                    visible: false
+                }).write()
             });
             return "ok"
         }
@@ -81,7 +85,7 @@ var cartService = {
         const grouped = [];
         allSessionIds.forEach((session)=>{
             const items = cartTable.filter((o) => {
-                if (o.sessionId === session && ["booked", "rejected"].includes(o.status)) {
+                if (o.sessionId === session && ["booked", "rejected", "inProgress"].includes(o.status)) {
                     return true;
                 }
                 return false;

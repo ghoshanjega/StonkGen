@@ -11,6 +11,9 @@ var authenticationController = {
         const auth = req.body;
         res.json(authenticationService.signup(auth));
     },
+    listAllUsers : function (req, res) {
+        res.json(authenticationService.listAllUsers());
+    }
 };
 
 module.exports = authenticationController;

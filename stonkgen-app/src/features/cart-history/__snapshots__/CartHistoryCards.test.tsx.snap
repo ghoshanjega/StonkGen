@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Cart History Cards Component should render the cart Item 1`] = `ShallowWrapper {}`;
+
 exports[`Cart Item Component should render the cart Item 1`] = `ShallowWrapper {}`;

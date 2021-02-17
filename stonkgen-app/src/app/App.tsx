@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { AdminPage } from "../features/admin/AdminPage";
 
 import { AuthenticationPage } from "../features/authentication/AuthenticationPage";
 import { selectUser } from "../features/authentication/AuthenticationSlice";
@@ -31,6 +33,9 @@ function App() {
           <Route path="/order-history">
             <CartHistoryPage />
           </Route>
+          <Route path="/admin">
+            <AdminPage />
+          </Route>
           <Route path="/login">
             <AuthenticationPage />
           </Route>
@@ -39,6 +44,7 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

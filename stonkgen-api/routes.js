@@ -22,4 +22,6 @@ module.exports = function (app) {
         .patch(cart.removeItems);
     app.route('/cart/history')
         .get(cart.getAllPreviousCartSessions);
+    app.route('/userList')
+        .get(authentication.listAllUsers);
 };

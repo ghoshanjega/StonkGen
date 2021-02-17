@@ -32,7 +32,8 @@ var authenticationService = {
                     return {
                         userName: user.userName,
                         fullName: user.fullName,
-                        sessionId: session
+                        sessionId: session,
+                        admin : user.admin || false
                     }
                 }
                 throw new ErrorHandler(401, 'Unauthorized')
@@ -42,7 +43,7 @@ var authenticationService = {
 
     },
     signup: function (auth) {
-        const { userName, password, fullName } = auth
+        const { userName, password, fullName, admin } = auth
         if (!userName || !password || !fullName) {
             throw new ErrorHandler(400, 'Missing required email and password fields')
         }
@@ -54,7 +55,8 @@ var authenticationService = {
                 id: Date.now().toString(),
                 fullName,
                 userName,
-                password
+                password,
+                admin : admin || false
             }).write())
             
             const session = Date.now().toString()
@@ -76,6 +78,9 @@ var authenticationService = {
     getAllSessionsOfUser: function(auth) {
         const {userId } = auth;
         return sessionTable.filter({userId}).value();
+    },
+    listAllUsers: function() {
+        return userTable.value()
     }
 };
 
