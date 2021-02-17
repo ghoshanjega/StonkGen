@@ -1,7 +1,7 @@
 import authentication, { loginSuccess, initial, logoutSuccess, loginUnSuccessful, clearError, toggleDisplayLogin } from "./AuthenticationSlice";
 
 describe("Authentication reducer", () => {
-  it("should handle initil state", () => {
+  it("should handle initial state", () => {
     expect(authentication(undefined, initial)).toEqual({ displayLogin: true, error: null, user: null });
   });
 

@@ -52,7 +52,7 @@ export const Header = () => {
                   {user?.fullName}
                 </DropdownToggle>
                 <DropdownMenu right>
-                  {user?.admin && <DropdownItem onClick={() => history.push("/admin")}>Admin</DropdownItem>}
+                  {user && user.admin && <DropdownItem onClick={() => history.push("/admin")}>Admin</DropdownItem>}
                   <DropdownItem onClick={() => history.push("/order-history")}>History</DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem onClick={() => handleLogout()}>Logout</DropdownItem>

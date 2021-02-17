@@ -1,5 +1,5 @@
 import React from "react";
-import { DisplayStatus } from "../cart/DisplayStatus";
+import { DisplayStatus } from "../../components/DisplayStatus";
 import { IGroupedCartItems } from "./CartHistorySlice";
 
 interface Props {
@@ -39,7 +39,7 @@ export const CartHistoryCards = ({ cartItems }: Props) => {
                           <td data-test="bloombergTickerLocal">{item.stock.bloombergTickerLocal}</td>
                           <td data-test="executionSide">{item.executionSide}</td>
                           <td data-test="executionMode">{item.executionModeBooked}</td>
-                          <td data-test="priceBooked">{item.priceBooked + " " + item.stock.currency}</td>
+                          <td data-test="priceBooked">{item.priceBooked?.toFixed(2) + " " + item.stock.currency}</td>
                           <td data-test="amountBooked">{item.amountBooked}</td>
                         </tr>
                       );

@@ -13,6 +13,27 @@
       "userName": "admin",
       "password": "123123",
       "admin": true
+    },
+    {
+      "id": "1613538803970",
+      "fullName": "User 1",
+      "userName": "user1",
+      "password": "123123",
+      "admin": true
+    },
+    {
+      "id": "1613539346275",
+      "fullName": "User 2",
+      "userName": "user2",
+      "password": "123123",
+      "admin": false
+    },
+    {
+      "id": "1613539620489",
+      "fullName": "Jean Delamarne",
+      "userName": "Stonkstothemoon69",
+      "password": "pute123",
+      "admin": false
     }
   ],
   "userSessions": [
@@ -31,6 +52,34 @@
     {
       "id": "1613494497219",
       "userId": "1613486711395"
+    },
+    {
+      "id": "1613538803973",
+      "userId": "1613538803970"
+    },
+    {
+      "id": "1613538868909",
+      "userId": "1613538803970"
+    },
+    {
+      "id": "1613539001919",
+      "userId": "1613538803970"
+    },
+    {
+      "id": "1613539231645",
+      "userId": "1613538803970"
+    },
+    {
+      "id": "1613539346275",
+      "userId": "1613539346275"
+    },
+    {
+      "id": "1613539620490",
+      "userId": "1613539620489"
+    },
+    {
+      "id": "1613539795867",
+      "userId": "1613539620489"
     }
   ]
 }

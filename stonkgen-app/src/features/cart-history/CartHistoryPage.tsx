@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../authentication/AuthenticationSlice";
 import { ICartItemExtended } from "../cart/CartSlice";
-import { DisplayStatus } from "../cart/DisplayStatus";
+import { DisplayStatus } from "../../components/DisplayStatus";
 import { CartHistoryCards } from "./CartHistoryCards";
 import { fetchCartItems, selectCartHistoryItems } from "./CartHistorySlice";
 

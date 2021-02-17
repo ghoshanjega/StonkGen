@@ -1,44 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+## Setup
 
-## Available Scripts
+`yarn`
 
-In the project directory, you can run:
+## Start
 
-### `yarn start`
+`yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## State
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+I wanted to showcase mainly redux as I've used React Context, useState and other hooks to manage state in the other SG projects. I used [redux toolkit](https://github.com/reduxjs/redux-toolkit) to save a bit of time writing boiler plate code. Bootstrap for desing with minimal extra css. Jest, Enzyme for testing. 
 
-### `yarn test`
+### Authentication page (Additional feature)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Single page for login and signup. Used Formik library in the intention to use Yup for validation, but didnt get around to it. [AuthenticationPage.test](stonkgen-app/src/features/authentication/AuthenticationPage.test.tsx) showcases testing a page with redux store and actions. [AuthenticationSlice.test](stonkgen-app/src/features/authentication/AuthenticationSlice.test.ts) showcases testing redux dispatches. 
 
-### `yarn build`
+### Admin page
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A simple page to show all the users on the platoform. I used useState here for a change. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Cart page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Shows a list of execution items. [CartItem](stonkgen-app/src/features/cart/CartItem.tsx) shows each item and calls the function defined on parent if there is any change on the component. This dispatches the updateItem and sees if the execution is ready for booking. [CartItem.test](stonkgen-app/src/features/cart/CartItem.test.tsx) showcases testing a component which relies on props for data and event handling.
 
-### `yarn eject`
+As for the error in "5 HK" and "11 HK", I return the error from the backend. And proceed to keep the status as "inProgress" by design. I wasn't sure if this should be "rejected". The component is aware that there was an error in the previous execution even when you close the error popup. I dont save the "inProgress" on the backend because it could be possible that the data could not have reached the db. So on refresh, expect the items to go back to prebooking status (ready/not ready).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Cart History (Additional feature)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ Shows a list of previous cart actions. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ ### Stockslist
+ 
+ Shows the stocks.json list provided. Supports filtering (additional feature) by order, order trend and amount of items. I've used dispatch functions directly in each component to showcase components that have a shared state dependency and manipulation. Supports Pagination (additional feature) too.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

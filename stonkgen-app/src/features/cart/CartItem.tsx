@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ICartItemExtended } from "./CartSlice";
-import { DisplayStatus } from "./DisplayStatus";
+import { DisplayStatus } from "../../components/DisplayStatus";
 
 interface Props {
   item: ICartItemExtended;

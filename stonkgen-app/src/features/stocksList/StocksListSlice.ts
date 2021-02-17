@@ -57,6 +57,7 @@ export const stocksListSlice = createSlice({
             state.displayTable = !state.displayTable;
         },
         fetchStarted: (state, action) => {
+            state.error = null;
             state.isLoading = true;
         },
         fetchSuccessful: (state, action) => {

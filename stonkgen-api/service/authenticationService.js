@@ -67,6 +67,7 @@ var authenticationService = {
             return {
                 userName: newUser.userName,
                 fullName: newUser.fullName,
+                admin: newUser.admin,
                 sessionId: session
             }
         }
