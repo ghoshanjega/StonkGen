@@ -6,6 +6,8 @@
 
 `yarn start`
 
+Bootstrapped from this template [CRA Redux Typescript](https://github.com/reduxjs/cra-template-redux-typescript)
+
 ## State
 
 I wanted to showcase mainly redux as I've used React Context, useState and other hooks to manage state in the other SG projects. I used [redux toolkit](https://github.com/reduxjs/redux-toolkit) to save a bit of time writing boiler plate code. Bootstrap for desing with minimal extra css. Jest, Enzyme for testing. 
@@ -31,4 +33,14 @@ As for the error in "5 HK" and "11 HK", I return the error from the backend. And
  ### Stockslist
  
  Shows the stocks.json list provided. Supports filtering (additional feature) by order, order trend and amount of items. I've used dispatch functions directly in each component to showcase components that have a shared state dependency and manipulation. Supports Pagination (additional feature) too.
+
+
+### Components
+
+
+1. Loading Error = Takes care of loading (spinner), error (show error message and show refresh button if available) for big lists.
+2. Brand logo
+3. Header
+4. Footer
+
 
